@@ -26,4 +26,4 @@ const printVehicle = (vehicle: Vehicle): void => {
   console.log(`Name is ${vehicle.name}`);
 };
 
-printVehicle(oldCivic); // the only problem is the lenght of type annotation that we are doing
+printVehicle(oldCivic); // the only problem is the length of type annotation that we are doing
