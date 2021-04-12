@@ -1,6 +1,6 @@
 import faker, { fake } from "faker";
 
-export class Comapny {
+export class Company {
   companyName: string;
   catchPhrase: string;
   location: {
