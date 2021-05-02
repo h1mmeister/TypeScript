@@ -5,7 +5,7 @@ class Sorter {
   //     this.collection = collection;
   //   }
 
-  constructor(public collection: number[]) {}
+  constructor(public collection: number[] | string) {}
 
   sort(): void {
     // const length = this.collection.length;
@@ -13,10 +13,17 @@ class Sorter {
 
     for (let i = 0; i < length; i++) {
       for (let j = 0; j < length - i - 1; j++) {
-        if (this.collection[j] > this.collection[j + 1]) {
-          const temp = this.collection[j];
-          this.collection[j] = this.collection[j + 1];
-          this.collection[j + 1] = temp;
+        if (this.collection instanceof Array) {
+          // Type Guard for Array
+          if (this.collection[j] > this.collection[j + 1]) {
+            const temp = this.collection[j];
+            this.collection[j] = this.collection[j + 1];
+            this.collection[j + 1] = temp;
+          }
+        }
+
+        if (typeof this.collection === "string") {
+          // tType Guard for String
         }
       }
     }
